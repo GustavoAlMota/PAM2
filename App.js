@@ -1,9 +1,8 @@
 import React from 'react';
-import { Text, StyleSheet, View, Image,FlatList} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { Header, createStackNavigator } from '@react-navigation/stack';
 import Home from './Screens/Home';
-import Details from './Screens/Details';
+import Produtos from './Screens/Produtos';
 
 
 export default function App() {
@@ -14,10 +13,10 @@ export default function App() {
    <NavigationContainer>
 
     <stack.Navigator>
-      <stack.Screen name='Home' component={Home}></stack.Screen>
-      <stack.Screen name='Details' component={Details}></stack.Screen>
+      <stack.Screen name='Home' component={Home}  options={{ headerShown: false }}></stack.Screen>
+      <stack.Screen name='Produtos' component={Produtos} options={{ headerShown: false }}></stack.Screen>
     </stack.Navigator>
-    
+
 
    </NavigationContainer>
   );

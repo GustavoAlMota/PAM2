@@ -13,6 +13,7 @@ const estilo = StyleSheet.create({
     position: 'absolute',
     justifyContent:'center',
     zIndex: 1,
+    position: 'fixed'
 
   },
   logo: {

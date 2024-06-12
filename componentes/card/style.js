@@ -15,12 +15,6 @@ const estilo = StyleSheet.create({
     borderRadius: 10,
     backgroundColor:'#ffff'
   },
-  container: {
-    flexDirection: "row",
-    display: 'flex',
-    justifyContent: 'space-between', 
-    width:'60%',
-  },
   conteudoNome: {
     alignItems: 'center'
   },
@@ -36,7 +30,11 @@ const estilo = StyleSheet.create({
     fontSize: 14,
     marginHorizontal: 10,
     padding: 3,
-  }
+  },
+  containerPrincipal: {
+    width:'60%'
+  },
+
 });
 
 export default estilo;

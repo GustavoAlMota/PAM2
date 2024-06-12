@@ -1,8 +1,15 @@
-import {View , Image , Text } from 'react-native'
+import {View , Image , Text , TouchableOpacity} from 'react-native'
 import estilo from './style'
+import { useNavigation } from '@react-navigation/native'
 
-export default function Card({ nome, preco, quantidade, cor, tamanho, imagem }) {
+export default function Card({ nome, preco, quantidade, cor, tamanho, imagem,}) {
+
+  const navigation = useNavigation();
+
   return (
+    <TouchableOpacity style={estilo.containerPrincipal}
+    onPress = {() => navigation.navigate('Produtos',{nome:nome, preco:preco, quantidade:quantidade, cor:cor, tamanho:tamanho, imagem:imagem})}>
+
     <View style={estilo.container}>
       <View style={estilo.card}>
       <Image style={estilo.imagem} source={imagem} resizeMode="contain"/>
@@ -16,7 +23,8 @@ export default function Card({ nome, preco, quantidade, cor, tamanho, imagem }) 
           <Text style={estilo.texto}>Tamanho: {tamanho}</Text>
         </View>
       </View>
-
+    
     </View>
+    </TouchableOpacity>
   );
 }

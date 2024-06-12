@@ -4,7 +4,7 @@ import estilo from './style';
 export default function NavBar({ onLogoPress }) {
   return (
     <View style={estilo.nav}>
-      <TouchableOpacity onPress={onLogoPress}>
+      <TouchableOpacity onPress = {() => navigation.navigate('Produtos')}>
         <Image style={estilo.logo} source={require('../../assets/reloo.png')} />
       </TouchableOpacity>
     </View>
